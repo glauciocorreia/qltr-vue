@@ -4,7 +4,12 @@
       <a class="nav-logo" href="#">Looper</a>
       <ul class="nav-list d-flex justify-content-between align-items-center">
         <li v-for="item in navLinks" :key="item.title">
-          <a :href="`${ item.href }`">{{ item.title }}</a>
+          <a :href="`${ item.href }`">
+            <template v-if="item.icon">
+              <i :class="`${ item.icon }`"></i>
+            </template>
+            {{ item.title }}
+            </a>
         </li>
       </ul>
       <a href="#">Looper</a>
@@ -21,7 +26,7 @@ export default {
         { href: "#", title: "Services" },
         { href: "#", title: "Work" },
         { href: "#", title: "About" },
-        { href: "#", title: "(01) 666 - 693 - 456" }
+        { href: "#", title: "(01) 666 - 693 - 456", icon: 'fas fa-phone' }
       ]
     };
   }
@@ -38,6 +43,11 @@ header {
       font-size: 24px;
       letter-spacing: 2px;
       color: $primary-color;
+      transition: transform .5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.3);
+      }
     }
 
     ul.nav-list {
@@ -57,13 +67,13 @@ header {
         &:hover {
           &:after {
             width: 100%;
-            background: darken($primary-color, 20%);
+            background: darken($primary-color, 10%);
           }
         }
 
         a {
           &:hover {
-            color: darken($primary-color, 20%);
+            color: darken($primary-color, 10%);
           }
         }
       }
