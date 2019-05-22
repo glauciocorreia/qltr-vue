@@ -29,21 +29,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
-
 header {
-    padding: 3% 4% 5% 4%;
+  padding: 3% 4% 5% 4%;
 
-}
-nav {
-  a.nav-logo {
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 43px;
-    letter-spacing: 2px;
-    color: $primary-color;
+  nav#nav-menu {
+    a.nav-logo {
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: $primary-color;
+    }
+
+    ul.nav-list {
+      width: 50%;
+
+      li {
+        &:after {
+          content: "";
+          display: block;
+          margin: auto;
+          height: 1px;
+          width: 0px;
+          background: transparent;
+          transition: width 0.5s ease, background-color 0.5s ease;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+            background: darken($primary-color, 20%);
+          }
+        }
+
+        a {
+          &:hover {
+            color: darken($primary-color, 20%);
+          }
+        }
+      }
+    }
   }
+}
+
+a {
+  color: $primary-color;
 }
 </style>
