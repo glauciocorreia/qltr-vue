@@ -40,10 +40,10 @@ header {
 nav {
   a.nav-logo {
     font-weight: 900;
-	font-size: 24px;
-	line-height: 43px;
-	letter-spacing: 2px;
-	color: $primary-color;
+    font-size: 24px;
+    line-height: 43px;
+    letter-spacing: 2px;
+    color: $primary-color;
   }
 }
 </style>

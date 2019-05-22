@@ -21,34 +21,7 @@ export default {
 
 <style lang="scss">
 
-@import 'assets/css/reset.css';
+@import 'assets/scss/reset.css';
+@import 'assets/scss/style.scss'
 
-
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100vh;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.d-flex {
-  display: flex;
-}
-.justify-content-between {
-  justify-content: space-between;
-}
-.align-items-center {
-  align-items: center;
-}
 </style>
