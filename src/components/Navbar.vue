@@ -35,13 +35,13 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  padding: 3% 4% 5% 4%;
+  padding: 4vh 4vw;
 
   nav#nav-menu {
     a.nav-logo {
       font-weight: 900;
-      font-size: 24px;
-      letter-spacing: 2px;
+      font-size: 1.715vw;
+      letter-spacing: 0.15vw;
       color: $primary-color;
       transition: transform .5s ease-in-out;
 

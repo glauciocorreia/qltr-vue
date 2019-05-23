@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="home">
     <div class="home-text d-flex justify-content-between align-items-center">
       <div class="home-text-left">
-        <span class="home-subtitle">WHAT WE DO?</span>
+        <span class="home-subtitle">{{ subtitle }}</span>
         <h1 class="home-title">
-          We grow
+          {{ title1 }}
           <br>
-          <span class="home-title-highlight">great business</span>
+          <span class="home-title-highlight">{{ title2 }}</span>
         </h1>
       </div>
       <div class="home-text-right">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="home-field-link">
-      <p>Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.</p>
+      <p>{{ textLink }}</p>
     </div>
   </div>
 </template>
@@ -22,7 +22,12 @@
 <script>
 export default {
   name: "HomeBody",
-  props: [],
+  props: {
+    subtitle: String,
+    title1: String,
+    title2: String,
+    textLink: String
+  },
   data() {
     return {};
   }
@@ -30,53 +35,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home {
+  .home-text {
+    margin: 10vh 4vw;
+    color: $primary-color;
 
+    div {
+      .home-subtitle {
+        font-weight: 800;
+        font-size: 1.03vw;
+        line-height: 2.3vw;
+        letter-spacing: 0.3vw;
+        text-transform: uppercase;
+      }
+      .home-title {
+        font-weight: 800;
+        font-size: 7.07vw;
+        line-height: 7.71vw;
 
-.home-text {
-	margin: 4% 4%;
+        .home-title-highlight {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .home-text-right {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: 800;
+      font-size: 1.030vw;
+      line-height: 2.1vw;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  .home-field-link {
+    margin: 4vh 48vw 4vh 0;
+    padding: 5vh 4vw 5vh 4vw;
+    border-top: 1px solid $primary-color;
+    border-right: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+
+    p {
+      color: $primary-color;
+      font-size: 1.030vw;
+    }
+  }
 }
-
-.home-text div .home-subtitle {
-	font-weight: 800;
-	font-size: 14.4px;
-	line-height: 30px;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-	color: #FCFCFC;
-}
-.home-text div .home-title {
-	font-weight: 900;
-	font-size: 99px;
-	line-height: 118px;
-	color: #FCFCFC;
-}
-
-.home-text div .home-title .home-title-highlight {
-	color: #F61067;
-}
-
-.home-text .home-text-right {
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
-	font-weight: 800;
-	font-size: 14.4px;
-	line-height: 30px;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-	color: #FCFCFC;
-}
-
-.home-field-link {
-	margin: 4% 48% 4% 0;
-	padding: 2% 2% 2% 4%;
-	border-top: 1px solid #FCFCFC;
-	border-right: 1px solid #FCFCFC;
-	border-bottom: 1px solid #FCFCFC;
-
-}
-
-.home-field-link p {
-	color: #FCFCFC;
-}
-
 </style>
