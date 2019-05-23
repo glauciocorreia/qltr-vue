@@ -1,6 +1,17 @@
-# qualitare-teste-front-vue
+# QLTR Vue Test
+
+
+
+**Tecnologias:** Vue.JS c/ SASS.
+
+**Observações:** Responsividade limitada. Para melhor aproveitamento, acessar somente em Desktop.
+
+
+
+------
 
 ## Project setup
+
 ```
 npm install
 ```
