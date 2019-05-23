@@ -9,16 +9,19 @@
               <i :class="`${ item.icon }`"></i>
             </template>
             {{ item.title }}
-            </a>
+          </a>
         </li>
       </ul>
-      <a href="#">Looper</a>
+      <Menu></Menu>
     </nav>
   </header>
 </template>
 
 <script>
+import Menu from "@/components/Menu.vue";
+
 export default {
+  components: { Menu },
   data() {
     return {
       navLinks: [
@@ -26,7 +29,7 @@ export default {
         { href: "#", title: "Services" },
         { href: "#", title: "Work" },
         { href: "#", title: "About" },
-        { href: "#", title: "(01) 666 - 693 - 456", icon: 'fas fa-phone' }
+        { href: "#", title: "(01) 666 - 693 - 456", icon: "fas fa-phone" }
       ]
     };
   }
@@ -43,7 +46,7 @@ header {
       font-size: 1.715vw;
       letter-spacing: 0.15vw;
       color: $primary-color;
-      transition: transform .5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
 
       &:hover {
         transform: scale(1.3);
@@ -54,6 +57,8 @@ header {
       width: 50%;
 
       li {
+        font-size: 1.2vw;
+
         &:after {
           content: "";
           display: block;
