@@ -7,6 +7,7 @@
         <li data-text="Services">Services</li>
         <li data-text="Work">Work</li>
         <li data-text="About">About</li>
+        <li data-text="Contact">Contact</li>
       </ul>
     </nav>
   </div>
@@ -32,6 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+// Menu adaptado de: https://codepen.io/hexagoncircle/pen/OMJeja 
 
 ul {
   list-style: none;
@@ -133,7 +136,7 @@ nav {
   .open & {
     top: 0;
     &:before {
-      animation: menu-animation 0.8s ease-out forwards;
+      animation: menu-animation 0.5s ease-out forwards;
     }
   }
 }
@@ -186,7 +189,7 @@ ul.menu {
       opacity: 1;
       transform: translate3d(0, 0, 0);
       transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-      @for $i from 1 to 5 {
+      @for $i from 1 to 6 {
         &:nth-child(#{$i}) {
           transition-delay: $i * 0.1s + 0.65s;
         }
